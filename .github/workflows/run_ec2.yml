@@ -33,7 +33,6 @@ jobs:
       run: |
         echo "$SSH_KEY" > key.pem
         chmod 600 key.pem
-        cat ~/.ssh/known_hosts
       env:
         SSH_KEY: ${{ secrets.SSH_KEY }}
 
@@ -44,6 +43,7 @@ jobs:
         ls
         python run.py
         ls
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
         ssh -i "key.pem" ubuntu@ec2-34-219-154-254.us-west-2.compute.amazonaws.com ls -l
         
 
