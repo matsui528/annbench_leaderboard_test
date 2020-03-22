@@ -29,6 +29,11 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-west-2
 
+    - name: ssh key generate
+      run: echo "$SSH_KEY" ＞ key && chmod 600 key
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
@@ -36,9 +41,7 @@ jobs:
         ls
         python run.py
         ls
+        ssh -i "key.pem" ubuntu@ec2-34-219-154-254.us-west-2.compute.amazonaws.com ls -l
         
-    - name: Install SSH key
-      uses: shimataro/ssh-key-action@v1
-      with:
-        key: ${{ secrets.SSH_KEY }}
+
 
