@@ -86,6 +86,7 @@ pwd
 pwd > /home/ubuntu/hoge.txt
 ls
 ls > /home/ubuntu/huga.txt'''
-    instance_id, public_ip = launch_instance(ami=ami, instance_type=instance_type, user_data=user_data)
-    print("instance_id: {}, public_ip: {}".format(instance_id, public_ip))
+    #instance_id, public_ip = launch_instance(ami=ami, instance_type=instance_type, user_data=user_data)
+    #print("instance_id: {}, public_ip: {}".format(instance_id, public_ip))
+    print("hogehoge")
 
