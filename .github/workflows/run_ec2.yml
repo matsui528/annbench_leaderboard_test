@@ -44,6 +44,7 @@ jobs:
         ssh ubuntu@ec2-34-219-154-254.us-west-2.compute.amazonaws.com ls -l
         
         
+        
 
 #        echo "$SSH_KEY" > key.pem
 #        chmod 600 key.pem
