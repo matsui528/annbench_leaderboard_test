@@ -36,3 +36,9 @@ jobs:
         ls
         python run.py
         ls
+        
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_KEY }}
+
