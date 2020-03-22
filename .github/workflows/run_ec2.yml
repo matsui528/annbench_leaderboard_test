@@ -32,8 +32,8 @@ jobs:
     - name: ssh key generate
       run: |
         echo "$SSH_KEY" > key.pem
-        ls
         chmod 600 key.pem
+        cat ~/.ssh/known_hosts
       env:
         SSH_KEY: ${{ secrets.SSH_KEY }}
 
