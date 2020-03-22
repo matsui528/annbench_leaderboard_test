@@ -33,7 +33,7 @@ jobs:
     - name: Run a multi-line script
       run: |
         aws ec2 run-instances \
-        --image-id ami-0d1cd67c26f5fca19
+        --image-id ami-008d8ed4bd7dc2485 \
         --count 1 \
         --instance-type t2.micro \
         --key-name web_app \
