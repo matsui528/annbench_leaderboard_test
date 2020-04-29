@@ -3,11 +3,11 @@ name: run_ec2
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+#on:
+#  push:
+#    branches: [ master ]
+#  pull_request:
+#    branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -38,9 +38,10 @@ jobs:
     - name: Run a multi-line script
       run: |
         pip install paramiko scp boto3
-        ls
-        python run.py
-        ls
+
+#        ls
+#        python run.py
+#        ls
 
 #ssh ubuntu@ec2-34-219-154-254.us-west-2.compute.amazonaws.com ls -l
         
